@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appliance Asset Management</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="profile-header">
+            <div class="profile-title">Profile</div>
+            <div class="user-profile">
+                <div class="notification-icon">
+                    <i class="fas fa-bell"></i>
+                </div>
+                <img src="https://via.placeholder.com/40" alt="User Avatar" class="user-avatar">
+                <div class="user-info">
+                    <div class="user-name">Jordan Walter</div>
+                    <div class="user-role">Whoever</div>
+                </div>
+            </div>
+        </div>
+        <div class="breadcrumb">
+            <a href="#">&lt; Appliances</a>
+            <span>•</span>
+            <span>Replace</span>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 class="property-title">Blackhorse Mills / Flat number #101</h1>
+
+        <section class="appliance-info">
+            <h2 class="appliance-title">Washing Machine</h2>
+            <div class="appliance-details">
+                <div class="detail-card">
+                    <div class="detail-label">Brand</div>
+                    <div class="detail-value">Bosch</div>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-label">Model Number</div>
+                    <div class="detail-value">95I/LPQ</div>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-label">Usage</div>
+                    <div class="detail-value high">High</div>
+                </div>
+            </div>
+            <div class="warranty-status">
+                <div class="warranty-indicator"></div>
+                <div>Appliance is within warranty period</div>
+            </div>
+        </section>
+
+        <section class="replacement-section">
+            <h2 class="replacement-title">Iterum IQ recommended replacement</h2>
+            <table class="replacement-table">
+                <thead>
+                    <tr>
+                        <th>Appliances</th>
+                        <th>Brand</th>
+                        <th>Model</th>
+                        <th>Cost</th>
+                        <th>Efficiency</th>
+                        <th>Matching score</th>
+                        <th>Image</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="replacement-table-body">
+                    <!-- Replacement options will be loaded here dynamically -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- Modal for scheduling delivery -->
+    <div id="modal-overlay" class="modal-overlay">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2 class="modal-title">Schedule Replacement</h2>
+                <div class="modal-subtitle">Blackhorse Mills / Flat number #101</div>
+            </div>
+
+            <div class="appliance-summary">
+                <div class="summary-item">
+                    <div class="summary-label">Appliance</div>
+                    <div id="modal-appliance" class="summary-value">Washing machine</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-label">Brand</div>
+                    <div id="modal-brand" class="summary-value">Bosch</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-label">Model Number</div>
+                    <div id="modal-model" class="summary-value">95I/LPQ</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-label">Cost</div>
+                    <div id="modal-cost" class="summary-value">$3456</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-label">Efficiency</div>
+                    <div id="modal-efficiency" class="summary-value">Moderate</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-label">Matching Score</div>
+                    <div id="modal-matching" class="summary-value">100%</div>
+                </div>
+            </div>
+
+            <div class="delivery-section">
+                <h3 class="section-title">Please select data and time</h3>
+                <div class="date-selection">
+                    <div class="date-option" data-date="2025-04-15">
+                        <span>15<sup>th</sup> Sept</span>
+                    </div>
+                    <div class="date-option" data-date="2025-04-16">
+                        <span>16<sup>th</sup> Sept</span>
+                    </div>
+                    <div class="date-option" data-date="2025-04-17">
+                        <span>17<sup>th</sup> Sept</span>
+                    </div>
+                </div>
+
+                <input type="text" class="custom-date" placeholder="Select Other Date">
+
+                <div class="time-selection">
+                    <div class="time-dropdown">
+                        <select id="hour-select">
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10" selected>10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                        </select>
+                    </div>
+                    <div class="time-dropdown">
+                        <select id="minute-select">
+                            <option value="0">00</option>
+                            <option value="15">15</option>
+                            <option value="30" selected>30</option>
+                            <option value="45">45</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="notification-option">
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="notification-toggle">
+                        <span class="toggle-slider"></span>
+                    </label>
+                    <div class="notification-text">
+                        Want to enter tenant email and number to send notification of delivery and reminders? (Optional)
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-actions">
+                <button id="cancel-button" class="cancel-button">Cancel</button>
+                <button id="confirm-button" class="confirm-button">Confirm</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
