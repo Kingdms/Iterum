@@ -196,11 +196,11 @@ header {
 }
 
 .appliance-image {
-  width: 100px; /* Set the desired width */
-  height: auto; /* Maintain aspect ratio */
-  object-fit: cover; /* Ensure the image fits within the dimensions */
-  display: block; /* Prevent inline spacing issues */
-  margin: 0 auto; /* Center the image in the column */
+  display: block;
+  width: 100px; 
+  height: auto; 
+  object-fit: cover;  
+  margin: 0 auto; 
 }
 
 .order-button {
