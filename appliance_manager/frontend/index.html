@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appliance Asset Management</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="profile-header">
+            <div class="profile-title">Profile</div>
+            <div class="user-profile">
+                <div class="notification-icon">
+                    <i class="fas fa-bell"></i>
+                </div>
+                <!-- Default user avatar -->
+                <img src="images/default_profile.jpg" alt="User Avatar" class="user-avatar">
+                <div class="user-info">
+                    <div class="user-name">Jordan Walter</div>
+                    <div class="user-role">Whoever</div>
+                </div>
+            </div>
+        </div>
+        <div class="breadcrumb">
+            <a href="#">&lt; Appliances</a>
+            <span>•</span>
+            <span>Replace</span>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 class="property-title">Blackhorse Mills / Flat number #101</h1>
+
+        <section class="appliance-info">
+            <h2 class="appliance-title">Washing Machine</h2>
+            <div class="appliance-details">
+                <div class="detail-card">
+                    <div class="detail-label">Brand</div>
+                    <div class="detail-value">Bosch</div>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-label">Model Number</div>
+                    <div class="detail-value">95I/LPQ</div>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-label">Usage</div>
+                    <div class="detail-value high">High</div>
+                </div>
+            </div>
+            <div class="warranty-status">
+                <div class="warranty-indicator"></div>
+                <div>Appliance is within warranty period</div>
+            </div>
+        </section>
+
+        <section class="replacement-section">
+            <h2 class="replacement-title">Iterum IQ recommended replacement</h2>
+            <table class="replacement-table">
+                <thead>
+                    <tr>
+                        <th>Appliances</th>
+                        <th>Brand</th>
+                        <th>Model</th>
+                        <th>Cost</th>
+                        <th>Efficiency</th>
+                        <th>Matching score</th>
+                        <th>Image</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="replacement-table-body">
+                    <!-- Example row with default appliance image -->
+                    <tr>
+                        <td>Washing Machine</td>
+                        <td>Samsung</td>
+                        <td>WW90T554DAW</td>
+                        <td>$499</td>
+                        <td>High</td>
+                        <td>95%</td>
+                        <td>
+                            <div><div>    <img src="images/default_appliance.jpg" alt="Default Appliance Image" class="appliance-image">
+                            </div></div> <img src="images/default_appliance.jpg" alt="Default Appliance Image" class="appliance-image">
+                          
+                           
+                            <img src="https://www.google.com/aclk?sa=l&ai=DChsSEwiB--eDu7yMAxUhlFAGHfxQIfEYACICCAEQCRoCZGc&co=1&gclid=CjwKCAjw47i_BhBTEiwAaJfPphRumwGc08FQqqBFxwCx0j4GGDep-2KLexui9sPYYCP7SkclqZFBjBoCyB8QAvD_BwE&sig=AOD64_24q79b4ErvI3it-VBOkapJmROYFw&ctype=5&q=&ved=2ahUKEwjS7-ODu7yMAxUqYEEAHd1lI74Q9aACKAB6BAgFEFc&adurl=" alt="">
+                        </td>
+                        <td><button class="select-button">Select</button></td>
+                    </tr>
+                </tbody>
+            </table>
+           
+        </section>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
